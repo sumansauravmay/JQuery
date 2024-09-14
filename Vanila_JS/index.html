@@ -94,13 +94,26 @@
         });
       });
       */
-
+      
       $("#btn").click(function () {
-        $("#lorem").toggle(1000);
+        //$("#lorem").toggle(1000);
         //$('#lorem').slideToggle(1000)
         //$('#lorem').slideUp(1000)
         //$('#lorem').slideDown(1000)
+        /*
+        $("#lorem").animate(
+        {
+          opacity: 0.4,
+          height: "150px",
+          width: "250px",
+        },2000);
+        */
+        //$("#lorem").text("Hello World!");//will change the text ot Hello World
+        $("#lorem").remove(); //to remove from the dom
       });
+      
+    
+      
     });
 
     //There are mainly 3 types of selectors in jQuery
