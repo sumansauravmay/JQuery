@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery Tutorial</title>
+  </head>
+  <body>
+    <p id="p1">Hi, I am Suman Saurav!</p>
+    <p id="p2">Hi, I am paragraph2!</p>
+    <p class="p3">Hi, I am paragraph3!</p>
+    <p class="p4">Hi, I am paragraph4!</p>
+  </body>
+  <script src="../JS/JQuery-3.7.1.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+  <script>
+    // console.log($);
+
+    //JQuery syntax looks like this
+
+    //$("selector").action()
+
+    //$('p').click()//click on p
+    //$('p').click(()=>{
+    //  console.log("You clicked", this);
+    //$("p").hide();
+    //}) //do this when click on p
+    $(function () {
+      $("#p1").click(function () {
+        console.log("hide");
+        $("#p1").hide();
+      });
+      $(".p4").click(function () {
+        console.log("hide");
+        $(".p4").hide();
+      });
+      $("#p2").click(function () {
+        console.log("hide");
+        $("#p1").hide();
+      });
+      $("p.p3").click(function () {
+        console.log("hide 4th para", this);
+        $("p.p3").hide();
+      });
+    });
+
+    //There are mainly 3 types of selectors in jQuery
+    //1. id selectors
+    //2. class selectors
+    //3. element selectors
+  </script>
+</html>
