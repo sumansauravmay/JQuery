@@ -10,6 +10,24 @@
     <p id="p2">Hi, I am paragraph2!</p>
     <p class="p3">Hi, I am paragraph3!</p>
     <p class="p4">Hi, I am paragraph4!</p>
+
+    <div id="lorem">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad deserunt
+      necessitatibus laboriosam perferendis, tenetur laborum? Delectus
+      laboriosam facere voluptatibus, praesentium quidem ad amet nulla id
+      assumenda? Distinctio dolorum exercitationem velit? A amet qui hic
+      dignissimos soluta fuga pariatur reiciendis? Fugiat sequi architecto
+      itaque corporis suscipit quae ullam animi sunt dicta quos porro aliquam
+      quo cupiditate facere nulla, numquam, necessitatibus explicabo? Quas earum
+      iure debitis ipsum, non ipsa. Nobis, dolorem, magni nisi laudantium
+      tenetur vitae ipsam facere optio, harum voluptatibus maiores. Sit ad velit
+      laboriosam numquam magni, deserunt quibusdam voluptatem voluptate. Quos,
+      dicta! Dolores enim vitae facere impedit, unde doloribus voluptas aliquam.
+      Dicta ea totam impedit pariatur similique, consequuntur enim laboriosam!
+      Expedita hic reprehenderit ex minima minus corporis voluptatum repellat.
+      Veritatis.
+    </div>
+    <button id="btn">click</button>
   </body>
   <script src="../JS/JQuery-3.7.1.js"></script>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
@@ -26,7 +44,7 @@
     //$("p").hide();
     //}) //do this when click on p
     $(function () {
-      $("#p1").click(function () {
+      /* $("#p1").click(function () {
         console.log("hide");
         $("#p1").hide();
       });
@@ -42,11 +60,58 @@
         console.log("hide 4th para", this);
         $("p.p3").hide();
       });
+      */
+      /*
+      $("#p1").dblclick(function () {
+        console.log("hide");
+        $("#p1").hide();
+      });
+      $("#p2").hover(function () {
+        console.log("hover");
+        $("#p2").hide();
+      });
+      */
+
+      //demoing the on method
+      /*
+      $("p").on({
+        click: function () {
+          console.log("Thanks for clicking", this);
+        },
+        mouseleave: function () {
+          console.log("mouseleave");
+        },
+      });
+      */
+      /*
+      $("#lorem").click(function () {
+        // $("#lorem").hide(2000);
+        $("#lorem").hide(2000, function () {
+          console.log("Hiden");
+        });
+        $("#lorem").show(2000, function () {
+          console.log("Show!");
+        });
+      });
+      */
+
+      $("#btn").click(function () {
+        $("#lorem").toggle(1000);
+        //$('#lorem').slideToggle(1000)
+        //$('#lorem').slideUp(1000)
+        //$('#lorem').slideDown(1000)
+      });
     });
 
     //There are mainly 3 types of selectors in jQuery
     //1. id selectors
     //2. class selectors
     //3. element selectors
+
+    //Event in JQuery
+    //Mouse events=click, dblclick, mouseenter, mouseleave
+    //keyboardEvent= keypress, keydown, MediaKeyStatusMap
+    //form events=submit, change, focus, blur
+    //doucment/window events= load, resize, scroll, unload
   </script>
 </html>
